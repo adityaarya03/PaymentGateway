@@ -1,18 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import PrivateRoute from "./components/Auth/PrivateRoute";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <div className=' flex items-center justify-center text-green-600 bg-blue-950 h-screen'>
-      hello
+    <div className=" bg-black">
+      <Routes>
+        <Route
+          path="/"
+          element={
+              <Home />
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
