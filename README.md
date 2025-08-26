@@ -28,7 +28,7 @@ Razorpay is a popular payment gateway in India that allows businesses to accept,
 
 ## How Razorpay Payment Gateway Works
 
-![Razorpay Payment Flow Diagram](https://razorpay.com/docs/build/browser/assets/images/payment-flow-pg.jpg)
+![Razorpay Payment Flow Diagram](https://res.cloudinary.com/dhzaw6nix/image/upload/v1756228456/Razorpay_1_x3hdsq.jpg)
 
 1. **Order Creation:**  
    The backend creates a payment order using Razorpay's API, specifying the amount, currency, and receipt details.
